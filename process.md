@@ -14,7 +14,7 @@ One product moves through these. Each gate is a yes/no question or a command tha
 | 1 | **Planning** | `spec.md` filled: goals, target users, scope, non-scope, metrics, risks | Spec signed off by 1 dev + 1 sales |
 | 2 | **Budgeting** | Hour estimate (raw × 1.5-2.0 to absorb the review bottleneck), cloud cost, third-party API cost | Budget approved; re-reviewed at every phase change |
 | 3 | **GTM** | Positioning, acquisition channel, pricing, launch plan (owned by sales; AI only supports analysis) | GTM plan approved |
-| 4 | **Fundamentals** | Clean repo, blocking CI (test + lint + typecheck before merge), conventions, ADR #0 (stack), dev/staging/prod | CI green on `main` AND an automated deploy has run successfully |
+| 4 | **Fundamentals** | Clean repo, CI on every PR (test + lint + typecheck), conventions, ADR #0 (stack), dev/staging/prod | CI green on `main` AND an automated deploy has run successfully. No PR merges with a red check: enforced by branch protection where the plan allows it, otherwise by the reviewer, who states in the PR that they read the CI output. |
 | 5 | **First release (MVP)** | Minimum shippable core driven by the spec's success metrics | Deployed to prod AND N real users active |
 | 6 | **Iteration** | Feedback, analytics, reprioritization → back to phase 1 with a mini-spec, or on to 7 | Target metric improving, or a documented pivot |
 | 7 | **Finishing & stability** | Security hardening, perf benchmark, runbook, maintenance checklist | `release-checklist.md` fully ticked + operations plan signed |
