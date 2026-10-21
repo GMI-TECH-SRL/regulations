@@ -9,7 +9,7 @@ Applies to every code session. Language-agnostic: concrete commands and stack li
 | # | Rule |
 |---|------|
 | 1 | **Spec before code.** No task without a written requirement + measurable acceptance criteria. "Refactor this" / "fix this up" are not tasks. |
-| 2 | **Done = evidence.** A task is done only when tests, lint and typecheck pass. Paste the terminal output. Self-certifying without logs is forbidden. |
+| 2 | **Done = evidence.** A task is done only when tests, lint and typecheck pass. Run the check target and paste its output in the PR as a pre-check; once CI exists, CI green on the PR is the proof. Self-certifying without logs is forbidden. |
 | 3 | **Small increments.** 1 task = 1 reviewable diff (~200-300 changed lines). No monoliths in one shot. |
 | 4 | **AI proposes, human decides.** Architecture, libraries, data model, breaking changes → present ≥2 options with trade-offs, wait for a human call, record it in an ADR. |
 | 5 | **The test is a requirement.** A feature without an automated test is an unfinished feature. |
