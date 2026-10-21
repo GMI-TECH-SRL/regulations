@@ -19,13 +19,15 @@ One product moves through these. Each gate is a yes/no question or a command tha
 | 6 | **Iteration** | Feedback, analytics, reprioritization → back to phase 1 with a mini-spec, or on to 7 | Target metric improving, or a documented pivot |
 | 7 | **Finishing & stability** | Security hardening, perf benchmark, runbook, maintenance checklist | `release-checklist.md` fully ticked + operations plan signed |
 
-### Metrics — only two
+### Metrics — only three
 
-Track nothing else. Both come from git and the incident log, zero extra tooling.
+Track nothing else. All come from git and the incident log, zero extra tooling.
+Lead time alone rewards speed; change fail rate catches speed bought with breakage, the typical AI failure mode (DORA).
 
 | Metric | Definition | Read it from |
 |---|---|---|
 | **Lead time for changes** | First commit on the branch → PR merged | Git timestamps |
+| **Change fail rate** | Deploys that needed a rollback or hotfix ÷ total deploys | Incident notes in `debt.md` ÷ release tags |
 | **MTTR** | Production breakage detected → rollback or hotfix live | Incident note in `debt.md` |
 
 ### Change management

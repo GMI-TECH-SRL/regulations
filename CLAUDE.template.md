@@ -36,5 +36,7 @@ Stack: <language / framework> · <backend> · <state or key lib>
 ## Project conventions
 <5-10 lines maximum. Only what is TRUE HERE and not in rules.md: naming, layering, the one weird thing about this repo, the trap a new session falls into.>
 
+Approved MCP servers / plugins: <none | list>
+
 ## Before you touch these, ask
 <Files or areas where a wrong change is expensive: auth, migrations, payment, the schema.>
