@@ -9,6 +9,7 @@ Regolamento AI aziendale GMI. Fonte canonica — non modificare le copie nei sin
 | `rules.md` | sessione AI | ogni sessione di codice |
 | `principles.md` | sessione AI | decisioni di design, codice, test, requisiti |
 | `process.md` | umani (Parte 1) + AI (Parte 2) | pianificazione / ogni task |
+| `legal.md` | umani | uso di tool AI: AI Act, GDPR, L. 132/2025, copyright; rivedere ogni anno |
 | `templates/spec.md` | umani | fase 1, prima di ogni feature |
 | `templates/adr.md` | umani + AI | ogni decisione strutturale |
 | `templates/pr.md` | AI | ogni PR |
