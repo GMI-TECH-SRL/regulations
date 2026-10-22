@@ -18,7 +18,7 @@ Stack: <language / framework> · <backend> · <state or key lib>
 ## Commands — use these, do not invent flags
 | Purpose | Command |
 |---|---|
-| **Full check (run before every handover)** | `<make check / npm run check / …>` |
+| **Full check (run before every handover)** | `<make check / npm run check / …>` — must include `regulations/scripts/trace.sh docs/specs` |
 | Tests | `<…>` |
 | Lint | `<…>` |
 | Typecheck / analyze | `<…>` |

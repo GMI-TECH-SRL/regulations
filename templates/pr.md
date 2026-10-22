@@ -1,6 +1,6 @@
 # <type>: <what changed>
 
-Spec: <link or path> · ADR: <link, if a structural decision was made>
+Spec: <link or path> · Covers: `AC-<…>`, `AC-<…>` · ADR: <link, if a structural decision was made>
 
 ## What changed
 - <…>

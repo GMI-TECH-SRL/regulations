@@ -16,6 +16,7 @@ Regolamento AI aziendale GMI. Fonte canonica — non modificare le copie nei sin
 | `templates/debt.md` | entrambi | vive nel repo, si aggiorna in corsa |
 | `templates/release-checklist.md` | umani | fase 7, gate prima del rilascio stabile |
 | `CLAUDE.template.md` | umani | una volta per repo, alla prima installazione |
+| `scripts/trace.sh` | CI + check target | ogni PR: ID `AC-…` spec → test → PR |
 
 `rules.md`, `process.md` e i template sono **identici per tutti i progetti**: niente esempi Flutter o React qui dentro.
 Tutto ciò che è specifico del progetto sta nel suo `CLAUDE.md`.
@@ -29,6 +30,10 @@ cp regulations/CLAUDE.template.md CLAUDE.md   # poi riempi i <…>
 cp regulations/templates/debt.md docs/debt.md # ledger vivo, uno per repo
 ln -s CLAUDE.md AGENTS.md                     # se usi anche Codex
 ```
+
+Aggiungi `regulations/scripts/trace.sh docs/specs` al check target del repo. In CI passa anche il body della PR:
+`regulations/scripts/trace.sh docs/specs pr_body.txt` (es. `gh pr view "$PR" --json body -q .body > pr_body.txt`).
+Lo script legge solo file tracciati da git: un test non ancora `git add` non conta.
 
 Clonare un repo che lo usa: `git clone --recurse-submodules <url>` (o `git submodule update --init` dopo un clone normale).
 Anche il checkout in CI deve includere i submodule. Con il submodule vuoto gli import `@regulations/…` del `CLAUDE.md` falliscono **in silenzio**: la sessione AI parte senza regole.

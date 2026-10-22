@@ -64,7 +64,8 @@ Read the spec. Identify which files are involved. Check how the repo already sol
 Edit only the target files. Respect the style rules. No drive-by refactoring (rule 11). If you find debt outside scope, note it — do not fix it.
 
 ### 4. Evidence gathering
-Run the repo's unified check target. Capture the terminal output verbatim. Failing output gets reported, not hidden and not worked around.
+Every acceptance criterion you implement gets a test that names its `AC-…` ID; tick the box in the spec.
+Run the repo's unified check target (it includes `regulations/scripts/trace.sh`). Capture the terminal output verbatim. Failing output gets reported, not hidden and not worked around.
 
 ### 5. PR handover
 Fill `templates/pr.md`: what changed, which files, test evidence, residual risk.
